@@ -63,5 +63,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         return pinView
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "ShowLocationDetailsSegue", sender: nil) //should be able to click on the blue i and be taken w a segue
+    }
 }
 
