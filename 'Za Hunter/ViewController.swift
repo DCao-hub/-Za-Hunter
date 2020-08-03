@@ -15,6 +15,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager() // cl is core location
     var region = MKCoordinateRegion() // mk is map kit
+    var mapItems = [MKMapItem]() //array of map item objects
+    var selectedMapItem = MKMapItem() //one map item object
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     annotation.coordinate = mapItem.placemark.coordinate
                     annotation.title = mapItem.name
                     self.mapView.addAnnotation(annotation)
+                    self.mapItems.append(mapItem)
                 }
             }
         }
@@ -66,6 +69,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         performSegue(withIdentifier: "ShowLocationDetailsSegue", sender: nil) //should be able to click on the blue i and be taken w a segue
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        for mapItem in mapItems {
+            if mapItem.placemark.coordinate.latitude == view.annotation?.coordinate.latitude &&
+                mapItem.placemark.coordinate.longitude == view.annotation?.coordinate.longitude {
+                selectedMapItem = mapItem // go through each map item in the array and make sure the lat. and long. are the same as the annotation
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //pass data in this func
+        if let destination = segue.destination as? LocationDetailsViewController {
+            destination.selectedMapItem = selectedMapItem //passing selected map item to next VC
+        }
     }
 }
 
