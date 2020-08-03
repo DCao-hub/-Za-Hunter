@@ -10,18 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation // detect where you are
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
-
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager() // cl is core location
-    var region = MKCoordinateRegion()
+    var region = MKCoordinateRegion() // mk is map kit
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         mapView.showsUserLocation = true
-        locationManager.delegate = self
+        locationManager.delegate = self // report to self aka view controller
         locationManager.startUpdatingLocation()
+        mapView.delegate = self
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.first!
@@ -30,6 +31,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: true)
     }
-
+    
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = "pizza" // this word will identify the thing ur looking 4
+        request.region = region // specify that this request should only look in the region specifed above in line 17
+        let search = MKLocalSearch(request: request)
+        search.start { (response, error) in
+            if let response = response {
+                for MapItem in response.mapItems {
+                    print(MapItem.name!)
+                }
+            }
+            
+            
+        }
+    }
+    
 }
 
