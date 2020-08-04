@@ -45,14 +45,62 @@
                     <view key="view" contentMode="scaleToFill" id="d2Z-m5-A5o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iC-Po-AYK">
+                                <rect key="frame" x="107" y="165" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8dH-AP-04E"/>
+                                    <constraint firstAttribute="width" constant="200" id="VVj-6r-paT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83F-6u-PhF">
+                                <rect key="frame" x="107" y="316" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5fd-tk-0gb"/>
+                                    <constraint firstAttribute="height" constant="150" id="rIs-e3-WLK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-DO-zqu">
+                                <rect key="frame" x="107" y="543" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bPu-Bm-TJD"/>
+                                    <constraint firstAttribute="width" constant="200" id="eYu-YN-mmJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="5kQ-Ex-r2q"/>
+                            <constraint firstItem="9iC-Po-AYK" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="ELY-hO-cZv"/>
+                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="top" secondItem="83F-6u-PhF" secondAttribute="bottom" constant="77" id="NmA-IL-yfq"/>
+                            <constraint firstItem="83F-6u-PhF" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="R5H-i2-F8B"/>
+                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="aZL-2J-5ce"/>
+                            <constraint firstItem="83F-6u-PhF" firstAttribute="top" secondItem="9iC-Po-AYK" secondAttribute="bottom" constant="101" id="eKq-Zt-t1c"/>
+                            <constraint firstItem="9iC-Po-AYK" firstAttribute="top" secondItem="cXB-NP-4LA" secondAttribute="top" constant="77" id="pRI-IH-W15"/>
+                            <constraint firstItem="9iC-Po-AYK" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="u7a-BN-YYk"/>
+                            <constraint firstItem="83F-6u-PhF" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="yNM-4E-DtU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cXB-NP-4LA"/>
                     </view>
                     <navigationItem key="navigationItem" id="Shj-Ln-vNj"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="83F-6u-PhF" id="g5e-79-kzE"/>
+                        <outlet property="nameLabel" destination="9iC-Po-AYK" id="5Wp-x1-K0U"/>
+                        <outlet property="phoneLabel" destination="YXQ-DO-zqu" id="67E-qR-MdA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4o-Db-EGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="130"/>
+            <point key="canvasLocation" x="1661" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HO2-15-cfP">
