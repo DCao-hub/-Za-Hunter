@@ -57,37 +57,50 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83F-6u-PhF">
-                                <rect key="frame" x="107" y="316" width="200" height="150"/>
+                                <rect key="frame" x="107" y="278" width="200" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5fd-tk-0gb"/>
-                                    <constraint firstAttribute="height" constant="150" id="rIs-e3-WLK"/>
+                                    <constraint firstAttribute="width" constant="200" id="a3s-Me-Kge"/>
+                                    <constraint firstAttribute="height" constant="150" id="c3e-7C-Kvd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-DO-zqu">
-                                <rect key="frame" x="107" y="543" width="200" height="50"/>
+                                <rect key="frame" x="107" y="502" width="200" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bPu-Bm-TJD"/>
-                                    <constraint firstAttribute="width" constant="200" id="eYu-YN-mmJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="Dn2-Dy-5LY"/>
+                                    <constraint firstAttribute="height" constant="50" id="ykV-c1-Zca"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQR-LT-5Wa">
+                                <rect key="frame" x="162.5" y="629" width="89" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ZcA-ir-aqx"/>
+                                    <constraint firstAttribute="width" constant="89" id="yF1-XT-PdN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <state key="normal" title="Directions"/>
+                                <connections>
+                                    <action selector="onDirectionsButtonTapped:" destination="nya-MD-sdF" eventType="touchUpInside" id="8KJ-Na-rTz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="5kQ-Ex-r2q"/>
+                            <constraint firstItem="83F-6u-PhF" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="5Pq-qa-BTM"/>
+                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="Bvs-rz-nl4"/>
+                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="top" secondItem="83F-6u-PhF" secondAttribute="bottom" constant="74" id="Dwj-QR-2jP"/>
                             <constraint firstItem="9iC-Po-AYK" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="ELY-hO-cZv"/>
-                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="top" secondItem="83F-6u-PhF" secondAttribute="bottom" constant="77" id="NmA-IL-yfq"/>
-                            <constraint firstItem="83F-6u-PhF" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="R5H-i2-F8B"/>
-                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="aZL-2J-5ce"/>
-                            <constraint firstItem="83F-6u-PhF" firstAttribute="top" secondItem="9iC-Po-AYK" secondAttribute="bottom" constant="101" id="eKq-Zt-t1c"/>
+                            <constraint firstItem="YXQ-DO-zqu" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="Uj0-ao-RgT"/>
+                            <constraint firstItem="83F-6u-PhF" firstAttribute="top" secondItem="9iC-Po-AYK" secondAttribute="bottom" constant="63" id="b2g-wN-Qzt"/>
                             <constraint firstItem="9iC-Po-AYK" firstAttribute="top" secondItem="cXB-NP-4LA" secondAttribute="top" constant="77" id="pRI-IH-W15"/>
+                            <constraint firstItem="iQR-LT-5Wa" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="sfm-N9-tSA"/>
                             <constraint firstItem="9iC-Po-AYK" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="u7a-BN-YYk"/>
-                            <constraint firstItem="83F-6u-PhF" firstAttribute="centerX" secondItem="d2Z-m5-A5o" secondAttribute="centerX" id="yNM-4E-DtU"/>
+                            <constraint firstItem="iQR-LT-5Wa" firstAttribute="top" secondItem="YXQ-DO-zqu" secondAttribute="bottom" constant="77" id="zJZ-rG-Gj5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cXB-NP-4LA"/>
                     </view>
